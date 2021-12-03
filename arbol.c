@@ -44,6 +44,6 @@ int main(int argc, char *argv[])
     /* end code */
 
     printf("Soc el proces %d y meu pare es %d\n", getpid(), getppid());
-    sleep(50);
+    sleep(1);
     return 0;
 }
