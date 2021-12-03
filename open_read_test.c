@@ -22,18 +22,27 @@ int main()
     fflush(stdin);
   }
 
-  printf("Cadena 2:\n");
-  while(read(STDIN_FILENO, &ch, 1) > 0 )
-  {
-    if (ch == '\n'){
-      break;
-    }
-    strncat(cadena2, &ch, 1);
-    fflush(stdin);
-  }
+  // printf("Cadena 2:\n");
+  // while(read(STDIN_FILENO, &ch, 1) > 0 )
+  // {
+  //   if (ch == '\n'){
+  //     break;
+  //   }
+  //   strncat(cadena2, &ch, 1);
+  //   fflush(stdin);
+  // }
+  printf("%s\n", cadena1);
 
-  write(STDOUT_FILENO, cadena1, sizeof(cadena1)-1);
-  write(STDOUT_FILENO, cadena2, sizeof(cadena2)-1);
+  printf("%ld\n", sizeof(cadena1));
+  // for (int i = 0; i < sizeof(cadena1); i++){
+  //   ch = cadena1[i];
+  //   // printf("%c\n", ch);
+  //   if (cadena1[i] != '\n'){
+  //     write(STDOUT_FILENO, &ch, 1);
+  //   }
+  // }
+  // write(STDOUT_FILENO, cadena1, sizeof(cadena1)-1);
+  // write(STDOUT_FILENO, cadena2, sizeof(cadena2)-1);
 
 
   return 0;
