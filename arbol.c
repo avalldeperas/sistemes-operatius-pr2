@@ -3,6 +3,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+void panic(char* msg) {
+  fprintf(stderr, "%s\n", msg);
+  exit(1);
+}
+
 int main(int argc, char *argv[])
 {
     int i, height, width;
@@ -14,6 +19,8 @@ int main(int argc, char *argv[])
 
     /* init code */
     int j;
+
+    if (height < 1 || width < 1) panic("Height and Width must be greater than 1");
 
     // Create Parents
     for(i = 1; i < height; i++)
